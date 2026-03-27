@@ -1,0 +1,18 @@
+# Ignore raw datasets
+data/raw/*
+
+# Keep folder structure
+!data/raw/.gitkeep
+
+# Ignore processed data
+data/processed/*
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+.env
