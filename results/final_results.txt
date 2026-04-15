@@ -1,0 +1,37 @@
+=== Logistic Regression ===
+Accuracy: 0.8635
+
+precision    recall  f1-score   support
+
+0       0.79      0.84      0.81      1617
+1       0.91      0.88      0.89      2926
+
+accuracy                           0.86      4543
+macro avg       0.85      0.86      0.85      4543
+weighted avg    0.87      0.86      0.86      4543
+
+
+=== Random Forest ===
+Accuracy: 0.8717
+
+precision    recall  f1-score   support
+
+0       0.84      0.79      0.81      1617
+1       0.89      0.92      0.90      2926
+
+accuracy                           0.87      4543
+macro avg       0.86      0.85      0.86      4543
+weighted avg    0.87      0.87      0.87      4543
+
+
+=== SVM ===
+Accuracy: 0.8001
+
+precision    recall  f1-score   support
+
+0       0.74      0.67      0.71      1617
+1       0.83      0.87      0.85      2926
+
+accuracy                           0.80      4543
+macro avg       0.78      0.77      0.78      4543
+weighted avg    0.80      0.80      0.80      4543
