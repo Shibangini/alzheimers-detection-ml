@@ -66,6 +66,8 @@ We applied **autoencoder-based dimensionality reduction** and a **pairwise integ
 * Logistic Regression
 * Random Forest ⭐
 * Support Vector Machine (SVM)
+* XGBoost
+* Naive Bayes
 
 ---
 
