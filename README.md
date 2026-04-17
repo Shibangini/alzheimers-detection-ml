@@ -75,38 +75,39 @@ We applied **autoencoder-based dimensionality reduction** and a **pairwise integ
 | ------------------- | -------- |
 | Logistic Regression | 86.35%   |
 | Random Forest       | ⭐ 87.17% |
+| XGBoost             | 87.06%   |
 | SVM                 | 80.01%   |
+| Naive Bayes         | 46.20%   |
 
 ---
 
-## 📈 Visualizations
+## 📈 Model Comparison
 
-* 📊 Model comparison bar graph
-* 🔲 Confusion matrix (Random Forest)
+![Model Comparison](results/final_model_comparison.png)
 
 ---
 
 ## 🏆 Key Insights
 
-* Random Forest performed best due to its ability to handle **nonlinear high-dimensional data**
-* Autoencoder effectively reduced dimensionality while preserving important patterns
-* Proper handling of **data leakage** significantly improved reliability of results
+* **Random Forest and XGBoost performed best**, showing strong capability in handling nonlinear high-dimensional data
+* Logistic Regression achieved competitive performance
+* SVM showed moderate performance
+* Naive Bayes performed poorly due to its assumption of feature independence, which is not suitable for multi-omics data
 
 ---
 
 ## 🧠 Conclusion
 
-This project demonstrates that combining **multi-omics data** with **deep learning-based feature extraction** improves Alzheimer’s detection performance.
+This study demonstrates that **ensemble-based models outperform simpler models** for multi-omics Alzheimer’s classification.
 
----
+The combination of:
 
-## 🛠️ Tech Stack
+* Autoencoder-based feature reduction
+* Multi-omics integration
+* Ensemble learning
 
-* Python
-* NumPy, Pandas
-* Scikit-learn
-* TensorFlow / Keras
-* Matplotlib
+leads to improved prediction performance.
+
 
 ---
 
