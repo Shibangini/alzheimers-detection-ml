@@ -1,0 +1,38 @@
+
+
+=== SVM (Bagging + Ensemble) ===
+Accuracy: 0.7907
+
+precision    recall  f1-score   support
+
+0       0.83      0.71      0.77      21
+1       0.76      0.86      0.81      22
+
+accuracy                           0.79      43
+macro avg       0.80      0.79      0.79      43
+weighted avg    0.80      0.79      0.79      43
+
+
+
+=== Random Forest (Bagging + Ensemble) ===
+Accuracy: 0.7906976744186046
+              precision    recall  f1-score   support
+
+           0       1.00      0.57      0.73        21
+           1       0.71      1.00      0.83        22
+
+    accuracy                           0.79        43
+   macro avg       0.85      0.79      0.78        43
+weighted avg       0.85      0.79      0.78        43
+
+
+=== XGBoost (Bagging + Ensemble) ===
+Accuracy: 0.813953488372093
+              precision    recall  f1-score   support
+
+           0       0.93      0.67      0.78        21
+           1       0.75      0.95      0.84        22
+
+    accuracy                           0.81        43
+   macro avg       0.84      0.81      0.81        43
+weighted avg       0.84      0.81      0.81        43
