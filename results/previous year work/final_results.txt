@@ -37,7 +37,7 @@ macro avg       0.78      0.77      0.78      4543
 weighted avg    0.80      0.80      0.80      4543
 
 
-=== XGBoost (Final - No Leakage) ===
+=== XGBoost ===
 Accuracy: 0.8706
 
 precision    recall  f1-score   support
@@ -50,7 +50,7 @@ macro avg       0.86      0.85      0.86      4543
 weighted avg    0.87      0.87      0.87      4543
 
 
-=== Naive Bayes (Final - No Leakage) ===
+=== Naive Bayes ===
 Accuracy: 0.4620
 
 precision    recall  f1-score   support
