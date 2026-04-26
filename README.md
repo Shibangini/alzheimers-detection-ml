@@ -1,130 +1,87 @@
-# 🧠 Alzheimer’s Detection using Multi-Omics Integration & Machine Learning
+🧠 Alzheimer’s Detection using Multi-Omics Data & Ensemble Learning
+📌 Overview
 
-## 📌 Overview
+This project focuses on the early detection of Alzheimer’s disease using multi-omics data integration, combining Gene Expression (GE) and DNA Methylation (DM) datasets.
 
-This project focuses on detecting **Alzheimer’s Disease (AD)** by integrating **Gene Expression (GE)** and **DNA Methylation (DM)** data using a multi-omics approach.
+The work extends a previous approach by introducing a bagging-based multi-run ensemble technique to improve robustness, stability, and generalization.
 
-We applied **autoencoder-based dimensionality reduction** and a **pairwise integration strategy**, followed by machine learning models for classification.
+🎯 Objectives
+Integrate heterogeneous biological datasets (GE + DM)
+Reduce dimensionality using Autoencoders
+Improve classification performance using Ensemble Learning
+Compare proposed method with previous year’s approach
+🧬 Dataset Description
+Gene Expression (GE): ~39,280 features → reduced to 64
+DNA Methylation (DM): ~485,577 features → reduced to 16
+Data combined using label-based matching (AD vs Normal)
+⚙️ Methodology
+🔹 Previous Approach
+Pairwise integration of GE and DM
+Single-run training
+Models used:
+Logistic Regression
+Random Forest
+SVM
+Naive Bayes
+XGBoost
+🔹 Proposed Approach (This Work)
+Label-based combination of GE and DM
+Feature scaling using StandardScaler
+Bagging (Bootstrap Sampling)
+Multi-run Ensemble (5 runs)
+Soft Voting (probability averaging)
+🧠 Models Used
+Support Vector Machine (SVM)
+Random Forest (Tuned)
+XGBoost
+Logistic Regression
+Naive Bayes
+📊 Results
+🔹 Proposed Work Performance
+Model	Accuracy
+Random Forest	⭐ 0.8837
+XGBoost	⭐ 0.8837
+SVM	0.8605
+Logistic Regression	0.8605
+Naive Bayes	0.6279
+🔹 Comparison with Previous Work
+Model	Previous	Proposed	Improvement
+SVM	0.8001	0.8605	⬆ Significant
+Random Forest	0.8717	0.8837	⬆ Slight
+XGBoost	0.8706	0.8837	⬆ Slight
+Logistic Regression	0.8635	0.8605	≈ Stable
+Naive Bayes	0.4620	0.6279	⬆ Major
+🔍 Key Insights
+Ensemble learning significantly improves model stability
+Multi-run approach reduces dependency on random data pairing
+Strong improvement observed in weaker models (SVM, Naive Bayes)
+Random Forest and XGBoost achieved best performance (~88%)
+🚀 Key Contributions
+Introduced Bagging + Multi-run Ensemble for multi-omics integration
+Improved Random Forest performance (0.81 → 0.88) through tuning
+Reduced randomness and increased prediction consistency
+Provided a robust alternative to pairwise integration
+📁 Project Structure
+Alzheimers-Detection-ML/
+│
+├── notebooks/                # Jupyter notebooks (pipeline & experiments)
+├── results/                  # Results, graphs, comparison files
+├── README.md                 # Project documentation
+🧠 Technologies Used
+Python
+NumPy, Pandas
+Scikit-learn
+XGBoost
+Matplotlib
+🎯 Conclusion
 
----
+The proposed ensemble-based approach improves robustness, stability, and generalization compared to the previous pairwise integration method. While accuracy improvements are moderate, the consistency and reliability of predictions are significantly enhanced.
 
-## 🚀 Key Features
+📌 Future Work
+Use larger matched datasets
+Apply deep learning models (CNN, Transformer-based models)
+Explore feature importance and explainability (SHAP, LIME)
+👩‍💻 Author
 
-* 🔬 Multi-omics data integration (GE + DM)
-* 🧠 Autoencoder-based feature extraction
-* 🔗 Pairwise integration of biological data
-* ⚠️ Data leakage identification and correction
-* 📊 Comparative analysis of ML models
-* 📈 Visualization using graphs and confusion matrix
-
----
-
-## 📂 Dataset
-
-* Gene Expression datasets:
-
-  * GSE33000
-  * GSE44770
-* DNA Methylation dataset:
-
-  * GSE80970
-
----
-
-## ⚙️ Methodology
-
-### 1️⃣ Preprocessing
-
-* Data cleaning and label extraction
-* Conversion to numerical format
-* Merging GE datasets
-
-### 2️⃣ Train-Test Split
-
-* 70–30 stratified split
-* Avoided data leakage
-
-### 3️⃣ Feature Reduction (Autoencoder)
-
-* GE: **39280 → 64 features**
-* DM: **485577 → 16 features**
-
-### 4️⃣ Pairwise Integration
-
-* Combined GE and DM features based on matching class labels
-* Final feature vector: **80 features**
-
-### 5️⃣ Leakage Fix
-
-* Ensured train and test pairing were done separately
-* Prevented overlap between datasets
-
----
-
-## 🤖 Models Used
-
-* Logistic Regression
-* Random Forest ⭐
-* Support Vector Machine (SVM)
-* XGBoost
-* Naive Bayes
-
----
-
-## 📊 Results
-
-| Model               | Accuracy |
-| ------------------- | -------- |
-| Logistic Regression | 86.35%   |
-| Random Forest       | ⭐ 87.17% |
-| XGBoost             | 87.06%   |
-| SVM                 | 80.01%   |
-| Naive Bayes         | 46.20%   |
-
----
-
-## 📈 Model Comparison
-
-![Model Comparison](results/final_model_comparison.png)
-
----
-
-## 🏆 Key Insights
-
-* **Random Forest and XGBoost performed best**, showing strong capability in handling nonlinear high-dimensional data
-* Logistic Regression achieved competitive performance
-* SVM showed moderate performance
-* Naive Bayes performed poorly due to its assumption of feature independence, which is not suitable for multi-omics data
-
----
-
-## 🧠 Conclusion
-
-This study demonstrates that **ensemble-based models outperform simpler models** for multi-omics Alzheimer’s classification.
-
-The combination of:
-
-* Autoencoder-based feature reduction
-* Multi-omics integration
-* Ensemble learning
-
-leads to improved prediction performance.
-
-
----
-
-## 📌 Future Work
-
-* Apply advanced deep learning models
-* Use larger datasets
-* Explore feature selection techniques
-* Perform robust cross-validation
-
----
-
-## 👩‍💻 Author
-
-**Shibangini Kar**
+Shibangini Kar
 B.Tech CSE | Final Year Project
-
----
